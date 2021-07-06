@@ -18,23 +18,22 @@ class ExampleJsonController extends StorefrontController
 {
     private SystemConfigService $systemConfigService;
 
-    /**
-     * ExampleJsonController constructor.
-     * @param SystemConfigService $systemConfigService
-     */
-    public function __construct(SystemConfigService $systemConfigService){
+    public function __construct(SystemConfigService $systemConfigService)
+    {
         $this->systemConfigService = $systemConfigService;
     }
 
     /**
      * @Since("6.4.0.0")
-     * @Route("/example/json", name="frontend.swag-training.json", methods={"GET"}, defaults={"XmlHttpRequest"=true})
+     * @Route("/swag-training/json", name="frontend.swag-training.json", methods={"GET"}, defaults={"XmlHttpRequest"=true})
      */
     public function getData(Request $request, Context $context): JsonResponse
     {
         $instance = $this->systemConfigService->get('SwagTrainingPluginConfig.config.instance');
-        return new JsonResponse([
-            'instance' => $instance
-        ]);
+
+        return new JsonResponse(
+            [
+                'instance' => $instance,
+            ]);
     }
 }
