@@ -1,0 +1,17 @@
+{
+  "name": "swag-training/json-controller",
+  "description": "Example JSON controller",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "SwagTraining\\JsonController\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "SwagTraining\\JsonController\\SwagTrainingJsonController",
+    "label": {
+      "en-GB": "Example JSON controller"
+    }
+  }
+}
