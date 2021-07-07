@@ -25,7 +25,7 @@ class ExampleJsonController extends StorefrontController
 
     /**
      * @Since("6.4.0.0")
-     * @Route("/swag-training/json", name="frontend.swag-training.json", methods={"GET"}, defaults={"XmlHttpRequest"=true})
+     * @Route("/swag-training/json-controller", name="frontend.swag-training.json", methods={"GET"}, defaults={"XmlHttpRequest"=true})
      */
     public function getData(Request $request, Context $context): JsonResponse
     {
