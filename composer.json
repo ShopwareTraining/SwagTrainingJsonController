@@ -1,5 +1,5 @@
 {
-  "name": "swag-training/shopware6-json-controller",
+  "name": "swag-training/json-controller",
   "description": "Example JSON controller",
   "type": "shopware-platform-plugin",
   "license": "MIT",
