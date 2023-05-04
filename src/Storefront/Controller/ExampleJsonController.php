@@ -2,6 +2,7 @@
 
 namespace SwagTraining\JsonController\Storefront\Controller;
 
+use Psr\Container\ContainerInterface;
 use Shopware\Core\Framework\Context;
 use Shopware\Core\Framework\Routing\Annotation\RouteScope;
 use Shopware\Core\Framework\Routing\Annotation\Since;
@@ -35,5 +36,16 @@ class ExampleJsonController extends StorefrontController
             [
                 'instance' => $instance,
             ]);
+    }
+
+    /**
+     * @required
+     */
+    public function setContainer(ContainerInterface $container): ?ContainerInterface
+    {
+        $previous = $this->container;
+        $this->container = $container;
+
+        return $previous;
     }
 }
